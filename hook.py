@@ -41,7 +41,7 @@ class Listener:
         source = s.get_user(params["srcuserid"])
         if source == None:
             return
-        content = params["content"].strip().lower()
+        content = params["content"].strip()
         self.send_discord_message(
             f"Channel message from {source['nickname']}: {content}")
 
